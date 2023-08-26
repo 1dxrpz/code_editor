@@ -7,6 +7,10 @@ for (var i = 1; i <= 1; i++) {
     value += nums + "\n";
 }
 
+CodeMirror.commands.autocomplete = function (cm) {
+    cm.showHint();
+}
+
 CodeMirror.fromTextArea(
     document.querySelector(".js-input"),
     {
@@ -25,7 +29,10 @@ CodeMirror.fromTextArea(
         electricChars: true,
         autoCloseBrackets: true,
         lineWrapping: true,
-        extraKeys: { "Ctrl-Q": function (cm) { cm.foldCode(cm.getCursor()); } },
+        extraKeys: {
+            "Ctrl-Q": function (cm) { cm.foldCode(cm.getCursor()); },
+            "Ctrl-Space": "autocomplete"
+        },
         foldGutter: true,
         gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
         theme: "dracula"
