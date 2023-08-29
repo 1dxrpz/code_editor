@@ -1,4 +1,7 @@
 {
-  "name": "gavno",
-  "main": "index.html"
+	"name": "gavno",
+	"main": "index.html",
+	"window": {
+		"frame": false
+	}
 }

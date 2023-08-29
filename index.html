@@ -1,65 +1,235 @@
 <html>
 
+
+
+
 <head>
+    <!-- LIBS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.26.0/codemirror.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.26.0/theme/dracula.css">
+    <!-- LIBS -->
+
+    <!-- ADDONS -->
     <link rel="stylesheet" href="https://codemirror.net/5/addon/dialog/dialog.css">
     <link rel="stylesheet" href="https://codemirror.net/5/addon/fold/foldgutter.css" />
     <link rel="stylesheet" href="https://codemirror.net/5/addon/hint/show-hint.css">
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="../styles/style.css">
+    <!-- ADDONS -->
+
+    <!-- THEMES -->
+    <link rel="stylesheet" href="./themes/3024-day.css">
+    <link rel="stylesheet" href="./themes/3024-night.css">
+    <link rel="stylesheet" href="./themes/abbott.css">
+    <link rel="stylesheet" href="./themes/abcdef.css">
+    <link rel="stylesheet" href="./themes/ambiance-mobile.css">
+    <link rel="stylesheet" href="./themes/ambiance.css">
+    <link rel="stylesheet" href="./themes/ayu-dark.css">
+    <link rel="stylesheet" href="./themes/ayu-mirage.css">
+    <link rel="stylesheet" href="./themes/base16-dark.css">
+    <link rel="stylesheet" href="./themes/base16-light.css">
+    <link rel="stylesheet" href="./themes/bespin.css">
+    <link rel="stylesheet" href="./themes/blackboard.css">
+    <link rel="stylesheet" href="./themes/cobalt.css">
+    <link rel="stylesheet" href="./themes/colorforth.css">
+    <link rel="stylesheet" href="./themes/darcula.css">
+    <link rel="stylesheet" href="./themes/dracula.css">
+    <link rel="stylesheet" href="./themes/duotone-dark.css">
+    <link rel="stylesheet" href="./themes/duotone-light.css">
+    <link rel="stylesheet" href="./themes/eclipse.css">
+    <link rel="stylesheet" href="./themes/elegant.css">
+    <link rel="stylesheet" href="./themes/erlang-dark.css">
+    <link rel="stylesheet" href="./themes/gruvbox-dark.css">
+    <link rel="stylesheet" href="./themes/hopscotch.css">
+    <link rel="stylesheet" href="./themes/icecoder.css">
+    <link rel="stylesheet" href="./themes/idea.css">
+    <link rel="stylesheet" href="./themes/isotope.css">
+    <link rel="stylesheet" href="./themes/juejin.css">
+    <link rel="stylesheet" href="./themes/lesser-dark.css">
+    <link rel="stylesheet" href="./themes/liquibyte.css">
+    <link rel="stylesheet" href="./themes/lucario.css">
+    <link rel="stylesheet" href="./themes/material-darker.css">
+    <link rel="stylesheet" href="./themes/material-ocean.css">
+    <link rel="stylesheet" href="./themes/material-palenight.css">
+    <link rel="stylesheet" href="./themes/material.css">
+    <link rel="stylesheet" href="./themes/mbo.css">
+    <link rel="stylesheet" href="./themes/mdn-like.css">
+    <link rel="stylesheet" href="./themes/midnight.css">
+    <link rel="stylesheet" href="./themes/monokai.css">
+    <link rel="stylesheet" href="./themes/moxer.css">
+    <link rel="stylesheet" href="./themes/neat.css">
+    <link rel="stylesheet" href="./themes/neo.css">
+    <link rel="stylesheet" href="./themes/night.css">
+    <link rel="stylesheet" href="./themes/nord.css">
+    <link rel="stylesheet" href="./themes/oceanic-next.css">
+    <link rel="stylesheet" href="./themes/panda-syntax.css">
+    <link rel="stylesheet" href="./themes/paraiso-dark.css">
+    <link rel="stylesheet" href="./themes/paraiso-light.css">
+    <link rel="stylesheet" href="./themes/pastel-on-dark.css">
+    <link rel="stylesheet" href="./themes/railscasts.css">
+    <link rel="stylesheet" href="./themes/rubyblue.css">
+    <link rel="stylesheet" href="./themes/seti.css">
+    <link rel="stylesheet" href="./themes/shadowfox.css">
+    <link rel="stylesheet" href="./themes/solarized.css">
+    <link rel="stylesheet" href="./themes/ssms.css">
+    <link rel="stylesheet" href="./themes/the-matrix.css">
+    <link rel="stylesheet" href="./themes/tomorrow-night-bright.css">
+    <link rel="stylesheet" href="./themes/tomorrow-night-eighties.css">
+    <link rel="stylesheet" href="./themes/ttcn.css">
+    <link rel="stylesheet" href="./themes/twilight.css">
+    <link rel="stylesheet" href="./themes/vibrant-ink.css">
+    <link rel="stylesheet" href="./themes/xq-dark.css">
+    <link rel="stylesheet" href="./themes/xq-light.css">
+    <link rel="stylesheet" href="./themes/yeti.css">
+    <link rel="stylesheet" href="./themes/yonce.css">
+    <link rel="stylesheet" href="./themes/zenburn.css">
+    <!-- THEMES -->
+
+    <!-- CUSTOM STYLES -->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- CUSTOM STYLES -->
 </head>
 
 <body>
-    <div class="grid">
-
-        <div class="grid__row">
-
-            <div class="grid__col grid__col--4">
-                <textarea class="js-input"></textarea>
+    <div id="control_panel">
+        <select onchange="selectTheme()" id=select>
+            <option selected>default</option>
+            <option>3024-day</option>
+            <option>3024-night</option>
+            <option>abbott</option>
+            <option>abcdef</option>
+            <option>ambiance</option>
+            <option>ayu-dark</option>
+            <option>ayu-mirage</option>
+            <option>base16-dark</option>
+            <option>base16-light</option>
+            <option>bespin</option>
+            <option>blackboard</option>
+            <option>cobalt</option>
+            <option>colorforth</option>
+            <option>darcula</option>
+            <option>dracula</option>
+            <option>duotone-dark</option>
+            <option>duotone-light</option>
+            <option>eclipse</option>
+            <option>elegant</option>
+            <option>erlang-dark</option>
+            <option>gruvbox-dark</option>
+            <option>hopscotch</option>
+            <option>icecoder</option>
+            <option>idea</option>
+            <option>isotope</option>
+            <option>juejin</option>
+            <option>lesser-dark</option>
+            <option>liquibyte</option>
+            <option>lucario</option>
+            <option>material</option>
+            <option>material-darker</option>
+            <option>material-palenight</option>
+            <option>material-ocean</option>
+            <option>mbo</option>
+            <option>mdn-like</option>
+            <option>midnight</option>
+            <option>monokai</option>
+            <option>moxer</option>
+            <option>neat</option>
+            <option>neo</option>
+            <option>night</option>
+            <option>nord</option>
+            <option>oceanic-next</option>
+            <option>panda-syntax</option>
+            <option>paraiso-dark</option>
+            <option>paraiso-light</option>
+            <option>pastel-on-dark</option>
+            <option>railscasts</option>
+            <option>rubyblue</option>
+            <option>seti</option>
+            <option>shadowfox</option>
+            <option>solarized dark</option>
+            <option>solarized light</option>
+            <option>the-matrix</option>
+            <option>tomorrow-night-bright</option>
+            <option>tomorrow-night-eighties</option>
+            <option>ttcn</option>
+            <option>twilight</option>
+            <option>vibrant-ink</option>
+            <option>xq-dark</option>
+            <option>xq-light</option>
+            <option>yeti</option>
+            <option>yonce</option>
+            <option>zenburn</option>
+        </select>
+        <div class="right_buttons">
+            <div class="button">
+                <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="24" height="24"/>
+                    <path d="M6 12H18" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2px"/>
+                </svg>
             </div>
+            <div class="button">
+                <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="24" height="24"/>
+                    <path d="M4 6C4 4.89543 4.89543 4 6 4H18C19.1046 4 20 4.89543 20 6V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V6Z" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2px"/>
+                </svg>
+            </div>
+            <div class="button">
+                <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                <svg width="22px" height="22px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="24" height="24"/>
+                    <path d="M7 17L16.8995 7.10051" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2px"/>
+                    <path d="M7 7.00001L16.8995 16.8995" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2px"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div id="inspector">
 
         </div>
+        <div class="gutter"></div>
+        <div class="code_area">
 
+            <textarea id="code_editor"></textarea>
+        </div>
     </div>
-    <script src="https://codemirror.net/5/lib/codemirror.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.26.0/mode/xml/xml.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.42.2/mode/clike/clike.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.26.0/addon/edit/matchbrackets.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.26.0/addon/edit/closebrackets.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.26.0/addon/selection/active-line.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.26.0/addon/display/panel.js"></script>
 
-    <script src="https://codemirror.net/5/addon/hint/show-hint.js"></script>
-    <script src="https://codemirror.net/5/addon/hint/anyword-hint.js" id=anyword></script>
+    <!-- LIBS -->
+    <script src="./libs/codemirror.js"></script>
+    <script src="./libs/marked.js"></script>
+    <script src="./libs/jquery-3.7.1.min.js"></script>
+    <!-- LIBS -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.26.0/addon/fold/foldcode.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.26.0/addon/fold/foldgutter.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.26.0/addon/fold/brace-fold.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.26.0/addon/fold/xml-fold.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.26.0/addon/fold/indent-fold.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.26.0/addon/fold/markdown-fold.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.26.0/addon/fold/comment-fold.js"></script>
+    <!-- ADDONS -->
+    <script src="./addons/xml.js"></script>
+    <script src="./addons/clike.min.js"></script>
+    <script src="./addons/matchbrackets.js"></script>
+    <script src="./addons/closebrackets.js"></script>
+    <script src="./addons/active-line.js"></script>
+    <script src="./addons/panel.js"></script>
+    <script src="./addons/foldcode.js"></script>
+    <script src="./addons/foldgutter.js"></script>
+    <script src="./addons/brace-fold.js"></script>
+    <script src="./addons/xml-fold.js"></script>
+    <script src="./addons/indent-fold.js"></script>
+    <script src="./addons/markdown-fold.js"></script>
+    <script src="./addons/comment-fold.js"></script>
+    <script src="./addons/anyword-hint.js" id=anyword></script>
+    <script src="./addons/show-hint.js"></script>
+    <script src="./addons/javascript-hint.js"></script>
+    <script src="./addons/dialog.js"></script>
+    <script src="./addons/searchcursor.js"></script>
+    <script src="./addons/search.js"></script>
+    <script src="./addons/annotatescrollbar.js"></script>
+    <script src="./addons/matchesonscrollbar.js"></script>
+    <script src="./addons/jump-to-line.js"></script>
+    <!-- ADDONS -->
 
+    <!-- KEYMAPS -->
+    <script src="./keymaps/sublime.js"></script>
+    <!-- KEYMAPS -->
 
-    <script src="https://codemirror.net/5/addon/dialog/dialog.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.js"></script>
-
-    <script src="https://codemirror.net/5/addon/hint/show-hint.js"></script>
-    <script src="https://codemirror.net/5/addon/hint/javascript-hint.js"></script>
-
-    <script src="https://codemirror.net/5/addon/dialog/dialog.js"></script>
-    <script src="https://codemirror.net/5/addon/search/searchcursor.js"></script>
-    <script src="https://codemirror.net/5/addon/search/search.js"></script>
-    <script src="https://codemirror.net/5/addon/scroll/annotatescrollbar.js"></script>
-    <script src="https://codemirror.net/5/addon/search/matchesonscrollbar.js"></script>
-    <script src="https://codemirror.net/5/addon/search/jump-to-line.js"></script>
-
-    <script src="https://codemirror.net/5/keymap/sublime.js"></script>
-
-
-    <script src="../scripts/main.js"></script>
+    <!-- CUSTOM SCRIPTS -->
+    <script src="scripts/main.js"></script>
+    <!-- CUSTOM SCRIPTS -->
 </body>
 
 </html>
