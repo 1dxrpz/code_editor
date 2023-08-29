@@ -82,6 +82,8 @@
     <link rel="stylesheet" href="./themes/zenburn.css">
     <!-- THEMES -->
 
+    <link rel="stylesheet" href="./libs/jqwidgets/styles/jqx.base.css" type="text/css" />
+
     <!-- CUSTOM STYLES -->
     <link rel="stylesheet" href="styles/style.css">
     <!-- CUSTOM STYLES -->
@@ -89,7 +91,7 @@
 
 <body>
     <div id="control_panel">
-        <select onchange="selectTheme()" id=select>
+        <select id="theme_selection">
             <option selected>default</option>
             <option>3024-day</option>
             <option>3024-night</option>
@@ -182,20 +184,45 @@
         </div>
     </div>
     <div class="content">
-        <div id="inspector">
+        <div id="jqxDockingLayout">
+            <!--autoHideGroup-->
+            <div data-container="ToolboxPanel">
+            List of tools</div>
+            <div data-container="HelpPanel">
+            Help topics</div>
+            <!--documentGroup-->
+            <div data-container="Document1Panel">
 
-        </div>
-        <div class="gutter"></div>
-        <div class="code_area">
+                <textarea id="code_editor" style="z-index: 9999"></textarea>
+            </div>
+            <div data-container="Document2Panel">
+                <textarea></textarea>
+            </div>
+            <!--bottom tabbedGroup-->
+            <div data-container="ErrorListPanel">
+            List of errors</div>
+            <!--right tabbedGroup-->
+            <div data-container="SolutionExplorerPanel">
+            Solution structure</div>
+            <div data-container="PropertiesPanel">
+            List of properties</div>
+            <!--floatGroup-->
+            <div data-container="OutputPanel">
 
-            <textarea id="code_editor"></textarea>
+            </div>
         </div>
     </div>
 
     <!-- LIBS -->
     <script src="./libs/codemirror.js"></script>
     <script src="./libs/marked.js"></script>
-    <script src="./libs/jquery-3.7.1.min.js"></script>
+
+    <script type="text/javascript" src="./libs/scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="./libs/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="./libs/jqwidgets/jqxribbon.js"></script>
+    <script type="text/javascript" src="./libs/jqwidgets/jqxwindow.js"></script>
+    <script type="text/javascript" src="./libs/jqwidgets/jqxlayout.js"></script>
+    <script type="text/javascript" src="./libs/jqwidgets/jqxdockinglayout.js"></script>
     <!-- LIBS -->
 
     <!-- ADDONS -->
