@@ -203,13 +203,13 @@
 
   function getQueryDialog(cm)  {
     var label = el("label", {className: "CodeMirror-search-label"},
-                   cm.phrase("Search:"),
+                   cm.phrase("🔎"),
                    el("input", {type: "text", "style": "width: 10em", className: "CodeMirror-search-field",
                                 id: "CodeMirror-search-field"}));
     label.setAttribute("for","CodeMirror-search-field");
     return el("", null, label, " ",
-              el("span", {style: "color: #666", className: "CodeMirror-search-hint"},
-                 cm.phrase("(Use /re/ syntax for regexp search)")));
+              el("div", {style: "color: #666", className: "CodeMirror-search-hint"},
+                 cm.phrase("/re/ syntax for regexp search")));
   }
   function getReplaceQueryDialog(cm) {
     return el("", null, " ",

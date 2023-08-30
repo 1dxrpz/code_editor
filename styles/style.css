@@ -19,7 +19,7 @@ body {
 	left: 0;
 	width: 100%;
 	height: var(--control_panel_height);
-	z-index: 999;
+	z-index: 9999;
 	background: #252526;
 	border-bottom: 1px solid rgba(255, 255, 255, .25);
 }
@@ -42,7 +42,7 @@ body {
 	font-family: 'segoe ui', arial, sans-serif;
 	color: #ccc;
 	height: 100%;
-	width: calc(100% - 150px);
+	width: calc(100% - 200px);
 	display: flex;
 	justify-content: start;
 	align-items: center;
@@ -78,4 +78,94 @@ body {
 	position: relative;
 	width: 100%;
 	height: 100%;
+}
+
+.editor_info {
+	position: absolute;
+	display: flex;
+	left: 0;
+	bottom: 0px;
+	background: #3e3e42;
+	height: 20px;
+	width: 100%;
+	z-index: 97;
+	border-top: 1px solid rgba(255, 255, 255, .2);
+	justify-content: flex-end;
+}
+
+.current_line {
+	opacity: .5;
+	padding: 0 10px;
+	border-right: 1px solid rgba(255, 255, 255, .2);
+	border-left: 1px solid rgba(255, 255, 255, .2);
+}
+
+.mode {
+	padding: 0 10px 0 20px;
+	color: #fff;
+	border: 0;
+	background: transparent;
+	outline: none;
+}
+
+.mode option {
+	color: #000;
+}
+
+.find_context_menu {
+	font-family: Montserrat, sans-serif;
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 99;
+	display: flex;
+	justify-content: center;
+}
+.find_context_menu .input {
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.07);
+	padding: 10px;
+	background: #e7e7e7;
+	position: relative;
+	top: 60px;
+	width: 500px;
+	height: 100px;
+	border-radius: 10px;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+}
+.find_context_menu .input input {
+	font-family: Montserrat, sans-serif;
+	padding: 5px 35px 5px 5px;
+	width: 420px;
+	outline: none;
+	border: none;
+	background: transparent;
+}
+.find_context_menu .input .hint {
+	margin-top: 10px;
+	border-top: 1px solid rgba(255, 255, 255, 0.7);
+	padding: 10px;
+}
+.find_context_menu .input .hint span {
+	padding: 5px 10px;
+	border-radius: 5px;
+	text-transform: uppercase;
+	font-size: 8pt;
+}
+.find_context_menu .input .hint span.key {
+	background: #111;
+	color: #eee;
+}
+.find_context_menu .input:before {
+	content: "🔍";
+	padding: 0 5px;
+	height: 100%;
+}
+.find_context_menu[shown=true] {
+	display: flex;
+}
+.find_context_menu[shown=false] {
+	display: none;
 }
