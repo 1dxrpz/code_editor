@@ -10,6 +10,34 @@ app.listen(PORT, () => {
 const folder = './';
 const fs = require('fs');
 
+const { exec, spawn } = require('child_process')
+
+var ls = spawn('npm', ['i', 'fs']);
+
+ls.stdout.on('data', function (data) {
+	console.log('stdout: ' + data.toString());
+});
+ls.stderr.on('data', function (data) {
+  console.log('stderr: ' + data.toString());
+});
+
+ls.on('exit', function (code) {
+  console.log('child process exited with code ' + code.toString());
+});
+
+/*
+exec('npm i fs', (err, output) => {
+    // once the command has completed, the callback function is called
+    if (err) {
+        // log and return if we encounter an error
+        console.error("could not execute command: ", err)
+        return
+    }
+    // log the output received from the command
+    console.log("Output: \n", output)
+})
+*/
+
 app.get("/", async (req, res) => {
 	let files = fs.readdirSync(folder).map(v => {
 		let isDir = fs.lstatSync(`${folder}${v}`).isDirectory();
