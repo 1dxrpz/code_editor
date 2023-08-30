@@ -1,4 +1,5 @@
 nwjs/
+node_modules/
 
 # Prerequisites
 *.d
