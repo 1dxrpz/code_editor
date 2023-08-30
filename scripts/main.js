@@ -2,76 +2,56 @@ $(document).ready(function () {
     var layout = [{
         type: 'layoutGroup',
         orientation: 'horizontal',
-        items: [{
-            type: 'autoHideGroup',
-            alignment: 'left',
-            width: 80,
-            unpinnedWidth: 200,
-            items: [{
-                type: 'layoutPanel',
-                title: 'Toolbox',
-                contentContainer: 'ToolboxPanel'
-            }, {
-                type: 'layoutPanel',
-                title: 'Help',
-                contentContainer: 'HelpPanel'
-            }]
-        }, {
-            type: 'layoutGroup',
-            orientation: 'vertical',
-            width: window.innerWidth - 200,
-            items: [{
-                type: 'documentGroup',
-                height: 400,
-                minHeight: 200,
-                items: [{
-                    type: 'documentPanel',
-                    title: 'Document 1',
-                    contentContainer: 'Document1Panel'
-                }, {
-                    type: 'documentPanel',
-                    title: 'Document 2',
-                    contentContainer: 'Document2Panel'
-                }]
-            }, {
+        items: [
+            {
                 type: 'tabbedGroup',
-                height: 200,
-                pinnedHeight: 30,
+                width: '10%',
                 items: [{
                     type: 'layoutPanel',
-                    title: 'Error List',
-                    contentContainer: 'ErrorListPanel'
+                    title: 'Solution Explorer',
+                    contentContainer: 'SolutionExplorerPanel'
+                }]
+            },
+            {
+                type: 'layoutGroup',
+                orientation: 'vertical',
+                width: '90%',
+                items: [{
+                    type: 'documentGroup',
+                    height: '50%',
+                    minHeight: '20%',
+                    items: [{
+                        type: 'documentPanel',
+                        title: 'Document 1',
+                        contentContainer: 'Document1Panel'
+                    }, {
+                        type: 'documentPanel',
+                        title: '⚙️ Settings',
+                        contentContainer: 'Document2Panel'
+                    }]
+                }, {
+                    type: 'tabbedGroup',
+                    height: '50%',
+                    pinnedHeight: '10%',
+                    items: [{
+                        type: 'layoutPanel',
+                        title: 'Error List',
+                        contentContainer: 'ErrorListPanel'
+                    }, {
+                        type: 'layoutPanel',
+                        title: 'Output',
+                        contentContainer: 'OutputPanel',
+                        selected: true
+                    }]
                 }]
             }]
-        }, {
-            type: 'tabbedGroup',
-            width: 220,
-            minWidth: 200,
-            items: [{
-                type: 'layoutPanel',
-                title: 'Solution Explorer',
-                contentContainer: 'SolutionExplorerPanel'
-            }, {
-                type: 'layoutPanel',
-                title: 'Properties',
-                contentContainer: 'PropertiesPanel'
-            }]
-        }]
-    }, {
-        type: 'floatGroup',
-        width: 500,
-        height: 200,
-        position: {
-            x: 350,
-            y: 250
-        },
-        items: [{
-            type: 'layoutPanel',
-            title: 'Output',
-            contentContainer: 'OutputPanel'
-        }]
     }];
-    $('#jqxDockingLayout').jqxDockingLayout({ width: window.innerWidth, height: window.innerHeight - 20, layout: layout });
+    $('#jqxDockingLayout').jqxDockingLayout({
+        width: "100%",
+        height: "calc(100% - 0px)",
+        layout: layout,
+        theme: "metrodark"
+    });
 
 
     var nums = "0123456789", space = "          ";
@@ -80,7 +60,7 @@ $(document).ready(function () {
     for (var i = 1; i <= 1; i++) {
         rulers.push({ color: colors[i], column: i * 10, lineStyle: "dashed" });
         for (var j = 1; j < i; j++) value += space;
-            value += nums + "\n";
+        value += nums + "\n";
     }
 
     CodeMirror.commands.autocomplete = function (cm) {

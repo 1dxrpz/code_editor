@@ -20,8 +20,8 @@ body {
 	width: 100%;
 	height: var(--control_panel_height);
 	z-index: 999;
-	background: rgba(0, 0, 0, .1);
-	border-bottom: 1px solid rgba(0, 0, 0, .1);
+	background: #252526;
+	border-bottom: 1px solid rgba(255, 255, 255, .25);
 }
 
 .content {
@@ -32,6 +32,22 @@ body {
 	left: 0;
 	overflow: hidden;
 	display: flex;
+}
+
+.draggable_topic {
+	-webkit-user-select: none;
+	-webkit-app-region: drag;
+	font-size: 12px;
+	line-height: 17px;
+	font-family: 'segoe ui', arial, sans-serif;
+	color: #ccc;
+	height: 100%;
+	width: calc(100% - 150px);
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	padding-left: 20px;
+	box-sizing: border-box;
 }
 
 .right_buttons {

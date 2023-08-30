@@ -83,6 +83,14 @@
     <!-- THEMES -->
 
     <link rel="stylesheet" href="./libs/jqwidgets/styles/jqx.base.css" type="text/css" />
+    <link rel="stylesheet" href="./libs/jqwidgets/styles/jqx.blackberry.css" type="text/css" />
+    <link rel="stylesheet" href="./libs/jqwidgets/styles/jqx.ui-darkness.css" type="text/css" />
+    <link rel="stylesheet" href="./libs/jqwidgets/styles/jqx.dark-ie.css" type="text/css" />
+    <link rel="stylesheet" href="./libs/jqwidgets/styles/jqx.flat.css" type="text/css" />
+    <link rel="stylesheet" href="./libs/jqwidgets/styles/jqx.dark.css" type="text/css" />
+    <link rel="stylesheet" href="./libs/jqwidgets/styles/jqx.metrodark.css" type="text/css" />
+    <link rel="stylesheet" href="./libs/jqwidgets/styles/jqx.metro.css" type="text/css" />
+
 
     <!-- CUSTOM STYLES -->
     <link rel="stylesheet" href="styles/style.css">
@@ -91,125 +99,115 @@
 
 <body>
     <div id="control_panel">
-        <select id="theme_selection">
-            <option selected>default</option>
-            <option>3024-day</option>
-            <option>3024-night</option>
-            <option>abbott</option>
-            <option>abcdef</option>
-            <option>ambiance</option>
-            <option>ayu-dark</option>
-            <option>ayu-mirage</option>
-            <option>base16-dark</option>
-            <option>base16-light</option>
-            <option>bespin</option>
-            <option>blackboard</option>
-            <option>cobalt</option>
-            <option>colorforth</option>
-            <option>darcula</option>
-            <option>dracula</option>
-            <option>duotone-dark</option>
-            <option>duotone-light</option>
-            <option>eclipse</option>
-            <option>elegant</option>
-            <option>erlang-dark</option>
-            <option>gruvbox-dark</option>
-            <option>hopscotch</option>
-            <option>icecoder</option>
-            <option>idea</option>
-            <option>isotope</option>
-            <option>juejin</option>
-            <option>lesser-dark</option>
-            <option>liquibyte</option>
-            <option>lucario</option>
-            <option>material</option>
-            <option>material-darker</option>
-            <option>material-palenight</option>
-            <option>material-ocean</option>
-            <option>mbo</option>
-            <option>mdn-like</option>
-            <option>midnight</option>
-            <option>monokai</option>
-            <option>moxer</option>
-            <option>neat</option>
-            <option>neo</option>
-            <option>night</option>
-            <option>nord</option>
-            <option>oceanic-next</option>
-            <option>panda-syntax</option>
-            <option>paraiso-dark</option>
-            <option>paraiso-light</option>
-            <option>pastel-on-dark</option>
-            <option>railscasts</option>
-            <option>rubyblue</option>
-            <option>seti</option>
-            <option>shadowfox</option>
-            <option>solarized dark</option>
-            <option>solarized light</option>
-            <option>the-matrix</option>
-            <option>tomorrow-night-bright</option>
-            <option>tomorrow-night-eighties</option>
-            <option>ttcn</option>
-            <option>twilight</option>
-            <option>vibrant-ink</option>
-            <option>xq-dark</option>
-            <option>xq-light</option>
-            <option>yeti</option>
-            <option>yonce</option>
-            <option>zenburn</option>
-        </select>
+        <div class="draggable_topic">
+            file: projects/test.c
+        </div>
         <div class="right_buttons">
             <div class="button">
                 <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-                <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="24" height="24"/>
-                    <path d="M6 12H18" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2px"/>
+                <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="12" height="1" x="4" y="12" fill="#fff" />
                 </svg>
             </div>
             <div class="button">
                 <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-                <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="24" height="24"/>
-                    <path d="M4 6C4 4.89543 4.89543 4 6 4H18C19.1046 4 20 4.89543 20 6V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V6Z" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2px"/>
+                <svg width="20px" height="20px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="12" height="12" x="4" y="4" fill="#fff" />
+                    <rect width="10" height="10" x="5" y="5" fill="#252526" />
                 </svg>
             </div>
             <div class="button">
-                <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-                <svg width="22px" height="22px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="24" height="24"/>
-                    <path d="M7 17L16.8995 7.10051" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2px"/>
-                    <path d="M7 7.00001L16.8995 16.8995" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2px"/>
-                </svg>
+                <div class="exit_button_svg" style="transform: rotate(45deg);">
+                    <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                    <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="15" height="1" x="3" y="12" fill="#fff" />
+                        <rect width="1" height="15" x="10" y="5" fill="#fff" />
+                    </svg>
+                </div>
             </div>
         </div>
     </div>
     <div class="content">
         <div id="jqxDockingLayout">
-            <!--autoHideGroup-->
-            <div data-container="ToolboxPanel">
-            List of tools</div>
-            <div data-container="HelpPanel">
-            Help topics</div>
-            <!--documentGroup-->
             <div data-container="Document1Panel">
-
                 <textarea id="code_editor" style="z-index: 9999"></textarea>
             </div>
             <div data-container="Document2Panel">
-                <textarea></textarea>
+                <h1>Settings</h1>
+                <hr />
+                <h3>Editor theme</h3>
+                <select id="theme_selection">
+                    <option>default</option>
+                    <option>3024-day</option>
+                    <option>3024-night</option>
+                    <option>abbott</option>
+                    <option>abcdef</option>
+                    <option>ambiance</option>
+                    <option>ayu-dark</option>
+                    <option>ayu-mirage</option>
+                    <option>base16-dark</option>
+                    <option>base16-light</option>
+                    <option>bespin</option>
+                    <option>blackboard</option>
+                    <option>cobalt</option>
+                    <option>colorforth</option>
+                    <option>darcula</option>
+                    <option>dracula</option>
+                    <option>duotone-dark</option>
+                    <option>duotone-light</option>
+                    <option>eclipse</option>
+                    <option>elegant</option>
+                    <option>erlang-dark</option>
+                    <option>gruvbox-dark</option>
+                    <option>hopscotch</option>
+                    <option>icecoder</option>
+                    <option>idea</option>
+                    <option>isotope</option>
+                    <option>juejin</option>
+                    <option>lesser-dark</option>
+                    <option>liquibyte</option>
+                    <option>lucario</option>
+                    <option>material</option>
+                    <option>material-darker</option>
+                    <option>material-palenight</option>
+                    <option>material-ocean</option>
+                    <option>mbo</option>
+                    <option>mdn-like</option>
+                    <option>midnight</option>
+                    <option>monokai</option>
+                    <option>moxer</option>
+                    <option>neat</option>
+                    <option>neo</option>
+                    <option>night</option>
+                    <option>nord</option>
+                    <option>oceanic-next</option>
+                    <option>panda-syntax</option>
+                    <option>paraiso-dark</option>
+                    <option>paraiso-light</option>
+                    <option>pastel-on-dark</option>
+                    <option>railscasts</option>
+                    <option>rubyblue</option>
+                    <option>seti</option>
+                    <option selected>shadowfox</option>
+                    <option>solarized dark</option>
+                    <option>solarized light</option>
+                    <option>the-matrix</option>
+                    <option>tomorrow-night-bright</option>
+                    <option>tomorrow-night-eighties</option>
+                    <option>ttcn</option>
+                    <option>twilight</option>
+                    <option>vibrant-ink</option>
+                    <option>xq-dark</option>
+                    <option>xq-light</option>
+                    <option>yeti</option>
+                    <option>yonce</option>
+                    <option>zenburn</option>
+                </select>
+                <hr />
             </div>
-            <!--bottom tabbedGroup-->
-            <div data-container="ErrorListPanel">
-            List of errors</div>
-            <!--right tabbedGroup-->
-            <div data-container="SolutionExplorerPanel">
-            Solution structure</div>
-            <div data-container="PropertiesPanel">
-            List of properties</div>
-            <!--floatGroup-->
-            <div data-container="OutputPanel">
-
-            </div>
+            <div data-container="ErrorListPanel"></div>
+            <div data-container="SolutionExplorerPanel">Solution structure</div>
+            <div data-container="OutputPanel"></div>
         </div>
     </div>
 
