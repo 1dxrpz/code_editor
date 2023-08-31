@@ -2,7 +2,10 @@
   "name": "gavno",
   "main": "index.html",
   "window": {
-    "frame": false
+    "frame": false,
+    "toolbar":true,
+    "min_width": 350,
+    "min_height": 200
   },
   "version": "1.0.0",
   "scripts": {

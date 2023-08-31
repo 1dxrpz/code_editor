@@ -52,6 +52,9 @@ document.body.addEventListener('keydown', e => {
 });
 var editor;
 $(document).ready(function () {
+	//if (nwin != undefined)
+	//ngui.Shell.openExternal('cmd.exe');
+
 	var layout = [{
 		type: 'layoutGroup',
 		orientation: 'horizontal',
