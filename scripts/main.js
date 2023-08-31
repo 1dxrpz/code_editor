@@ -52,6 +52,12 @@ document.body.addEventListener('keydown', e => {
 });
 var editor;
 $(document).ready(function () {
+	var loader = document.querySelector("#loader");
+	
+	setTimeout(() => loader.setAttribute("data-loaded", "true"), 1000);
+	setTimeout(() => loader.style.zIndex = -1, 2000);
+	
+
 	//if (nwin != undefined)
 	//ngui.Shell.openExternal('cmd.exe');
 
