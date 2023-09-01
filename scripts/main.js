@@ -55,7 +55,7 @@ $(document).ready(function () {
 	var loader = document.querySelector("#loader");
 	
 	setTimeout(() => loader.setAttribute("data-loaded", "true"), 1000);
-	setTimeout(() => loader.style.zIndex = -1, 2000);
+	setTimeout(() => loader.style.zIndex = -1, 1200);
 	
 
 	//if (nwin != undefined)
@@ -95,15 +95,20 @@ $(document).ready(function () {
 				type: 'tabbedGroup',
 				height: '50%',
 				pinnedHeight: '10%',
-				items: [{
+				items: [
+				{
+					type: 'layoutPanel',
+					title: 'Terminal',
+					contentContainer: 'TerminalPanel',
+					selected: true
+				}, {
 					type: 'layoutPanel',
 					title: 'Error List',
 					contentContainer: 'ErrorListPanel'
 				}, {
 					type: 'layoutPanel',
 					title: 'Output',
-					contentContainer: 'OutputPanel',
-					selected: true
+					contentContainer: 'OutputPanel'
 				}]
 			}]
 		}]
@@ -168,7 +173,7 @@ $(document).ready(function () {
 	editor.on("cursorActivity", () => {
 		var cursor = editor.getCursor();
 		current_line_info.innerHTML = `Line ${cursor.line + 1} Column ${cursor.ch}`
-	})
+	});
 });
 
 

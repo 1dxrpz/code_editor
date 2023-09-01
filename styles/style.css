@@ -163,7 +163,7 @@ body {
 	position: fixed;
 	top: 0;
 	left: 0;
-	background: rgba(0, 0, 0, 0.5);
+	background: rgba(0, 0, 0, 0.0);
 	z-index: 99;
 	display: flex;
 	justify-content: center;
@@ -176,7 +176,7 @@ body {
 	top: 60px;
 	width: 500px;
 	height: 100px;
-	border-radius: 10px;
+	border-radius: 0px;
 	border: 1px solid rgba(0, 0, 0, 0.15);
 }
 .find_context_menu .input input {
@@ -194,7 +194,7 @@ body {
 }
 .find_context_menu .input .hint span {
 	padding: 5px 10px;
-	border-radius: 5px;
+	border-radius: 0px;
 	text-transform: uppercase;
 	font-size: 8pt;
 }

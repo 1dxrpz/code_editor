@@ -1,32 +1,35 @@
 {
-  "name": "gavno",
-  "main": "index.html",
-  "window": {
-    "frame": false,
-    "toolbar":true,
-    "min_width": 350,
-    "min_height": 200
-  },
-  "version": "1.0.0",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/1dxrpz/code_editor.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/1dxrpz/code_editor/issues"
-  },
-  "homepage": "https://github.com/1dxrpz/code_editor#readme",
-  "description": "",
-  "dependencies": {
-    "axios": "^1.5.0",
-    "child_process": "^1.0.2",
-    "express": "^4.18.2",
-    "fs": "0.0.1-security",
-    "http": "^0.0.1-security"
-  }
+	"name": "gavno",
+	"main": "index.html",
+	"window": {
+		"frame": false,
+		"toolbar":true,
+		"min_width": 350,
+		"min_height": 200
+	},
+	"developer": {
+		"showDevToolsOnStartup": true
+	},
+	"version": "1.0.0",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/1dxrpz/code_editor.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/1dxrpz/code_editor/issues"
+	},
+	"homepage": "https://github.com/1dxrpz/code_editor#readme",
+	"description": "",
+	"dependencies": {
+		"axios": "^1.5.0",
+		"child_process": "^1.0.2",
+		"express": "^4.18.2",
+		"fs": "0.0.1-security",
+		"http": "^0.0.1-security"
+	}
 }
