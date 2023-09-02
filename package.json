@@ -3,7 +3,7 @@
 	"main": "index.html",
 	"window": {
 		"frame": false,
-		"toolbar":true,
+		"toolbar": true,
 		"min_width": 350,
 		"min_height": 200
 	},
@@ -30,6 +30,9 @@
 		"child_process": "^1.0.2",
 		"express": "^4.18.2",
 		"fs": "0.0.1-security",
-		"http": "^0.0.1-security"
+		"http": "^0.0.1-security",
+		"node-pty": "^1.0.0",
+		"ws": "^8.13.0",
+		"xterm": "^5.2.1"
 	}
 }
