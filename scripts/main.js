@@ -166,14 +166,12 @@ $(document).ready(function () {
 		editor.setOption("theme", theme);
 		location.hash = "#" + theme;
 	}
-
-	const code_area = document.querySelector(".code_area");
-
 	var current_line_info = document.querySelector(".current_line");
 	editor.on("cursorActivity", () => {
 		var cursor = editor.getCursor();
 		current_line_info.innerHTML = `Line ${cursor.line + 1} Column ${cursor.ch}`
 	});
+
 });
 
 

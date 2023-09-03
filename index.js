@@ -35,8 +35,6 @@ ptyProcess.onData((data) => {
 		ConnectedSocket.send(data.toString());
 });
 
-
-
 const folder = './';
 const fs = require('fs');
 
